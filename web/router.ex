@@ -17,6 +17,11 @@ defmodule Sleepwatching.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/renderers", PageController, :renderers
+    get "/confirm/:id", PageController, :confirm
+    get "/confirmed/:id", PageController, :confirmed
+    get "/turn_off/:uuid", PageController, :turn_off
+    post "/sleepiq/:id", PageController, :sleepiq
   end
 
   # Other scopes may use custom stacks.

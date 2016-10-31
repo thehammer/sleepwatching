@@ -1,0 +1,38 @@
+<div class="jumbotron creeper">
+  <h2>SleepWatching</h2>
+  <h4>(yeah... it's a little creepy)</h4>
+</div>
+<div class="row spacer"></div>
+<div class="row">
+  <div class="col-lg-12">
+    <h4>Media Renderers</h4>
+    <p>These devices on your network advertise as
+      <a href="http://upnp.org/specs/av/UPnP-av-RenderingControl-v1-Service.pdf">UPnP Rendering Controls.</a>:</p>
+  </div>
+</div>
+<div class="row spacer"></div>
+<%= for {id, info} <- @devices do %>
+  <div class="row device">
+    <div class="col-lg-12">
+      <div class="col-md-4 col-sm-2" align="right">
+        <img class="device" src="<%= info.icon %>">
+      </div>
+      <div class="col-md-8 col-sm-6" align="left">
+        <dl class="dl-horizontal">
+          <dt>Make</dt>
+          <dd><%= info.make %></dd>
+          <dt>Model</dt>
+          <dd><%= info.model %></dd>
+          <dt>Name</dt>
+          <dd><%= info.name %></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+<% end %>
+<div class="row spacer"></div>
+<div class="row">
+  <div class="col-lg-12">
+    <p>When you're ready, let's get back to selecting an <a href="/">IRCC device</a>.</p>
+  </div>
+</div>

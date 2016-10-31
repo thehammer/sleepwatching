@@ -1,36 +1,50 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
+<div class="jumbotron creeper">
+  <h2>SleepWatching</h2>
+  <h4>(yeah... it's a little creepy)</h4>
 </div>
-
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
+<div class="row spacer"></div>
+<div class="row">
+  <div class="col-lg-12">
+    <h4>Welcome to SleepWatching!</h4>
+    <p>This web application automatically turns off your television when you fall asleep. It currenly only
+    works with a few recent Sony TV models (specifically those allowing unauthenticated network IRCC) and
+    SleepNumber beds.</p>
+    <p>First, let's use <a href="https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol">SSDP</a>
+    to find your bedroom television. Below you'll see a list of the devices on your local network that
+    advertise support for IRCC, a proprietary protocol provided by some newer Sony devices.</p>
+    <p>If your TV is off, you may need to turn it on and refresh this page for it to be discovered. Also,
+    and this really goes without saying, your TV has to be connected to the network, so if your TV is
+    disconnected from the network, you'll need to enable it. And if your TV isn't network capable, well,
+    this just isn't going to work at all.</p>
   </div>
-
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
+</div>
+<div class="row spacer"></div>
+<%= for {id, info} <- @devices do %>
+  <div class="row device">
+    <div class="col-lg-12">
+      <div class="col-md-4 col-sm-2" align="right">
+        <img class="device" src="<%= info.icon %>">
+      </div>
+      <div class="col-md-8 col-sm-6" align="left">
+        <dl class="dl-horizontal">
+          <dt>Make</dt>
+          <dd><%= info.make %></dd>
+          <dt>Model</dt>
+          <dd><%= info.model %></dd>
+          <dt>Name</dt>
+          <dd><%= info.name %></dd>
+          <dt></dt>
+          <dd style="margin-top: 10px;"><button class="btn btn-primary btn-sm" onclick='window.location="/confirm/<%= id %>";'>It's this one!</button></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+<% end %>
+<div class="row spacer"></div>
+<div class="row">
+  <div class="col-lg-12">
+    <p>Pretty cool, right? All that information, including the images, is exposed by each of those devices.
+    And there are probably even more devices advertising on your network, since we're only showing the IRCC
+    ones. If you're curious, let's take a look at devices advertising as <a href="/renderers">Media Renderers</a>.</p>
   </div>
 </div>

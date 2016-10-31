@@ -1,1 +1,30 @@
 /* This file is for your main application css. */
+.jumbotron.creeper {
+  margin-bottom: 0px;
+  background-image: url(/images/creeper.jpg);
+  background-position: 0% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #EEE;
+  text-shadow: black 0.3em 0.3em 0.3em;
+  padding-top: 1px;
+  padding-bottom: 90px;
+  border-radius: 10px;
+}
+
+div.spacer {
+  height: 40px;
+}
+
+div.device {
+  padding-bottom: 5px;
+}
+
+img.device {
+  border-radius: 10px;
+}
+
+img.bed {
+  height: 120px;
+  border-radius: 10px;
+}
