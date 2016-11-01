@@ -9,6 +9,8 @@ and a SleepNumber bed. It uses SSDP to discover the TV and IRCC to turn it off. 
 is ongoing, and currently the application stops just short of utilizing sleep data, in advance of detecting when you fall
 asleep.
 
+Here are some screenshots:
+
 <p align="center">
   <img src="https://github.com/thehammer/sleepwatching/blob/master/web/static/assets/images/screenshot1.png?raw=true" alt="SSDP"/>
 </p>
