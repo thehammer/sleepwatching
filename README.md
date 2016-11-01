@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/thehammer/sleepwatching/blob/master/web/static/assets/images/creeper.jpg?raw=true" alt="SleepWatching"/>
+  <img src="https://github.com/thehammer/sleepwatching/blob/master/web/static/assets/images/header.png?raw=true" alt="SleepWatching"/>
 </p>
 
 This app is a work in progress!
@@ -10,15 +10,15 @@ is ongoing, and currently the application stops just short of utilizing sleep da
 asleep.
 
 <p align="center">
-  <img src="https://github.com/thehammer/sleepwatching/blob/master/web/static/assets/images/screenshot1.jpg?raw=true" alt="SSDP"/>
+  <img src="https://github.com/thehammer/sleepwatching/blob/master/web/static/assets/images/screenshot1.png?raw=true" alt="SSDP"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/thehammer/sleepwatching/blob/master/web/static/assets/images/screenshot2.jpg?raw=true" alt="IRCC"/>
+  <img src="https://github.com/thehammer/sleepwatching/blob/master/web/static/assets/images/screenshot2.png?raw=true" alt="IRCC"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/thehammer/sleepwatching/blob/master/web/static/assets/images/screenshot3.jpg?raw=true" alt="SleepIQ"/>
+  <img src="https://github.com/thehammer/sleepwatching/blob/master/web/static/assets/images/screenshot3.png?raw=true" alt="SleepIQ"/>
 </p>
 
 # Running the app
